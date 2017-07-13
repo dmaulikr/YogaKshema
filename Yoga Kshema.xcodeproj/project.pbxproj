@@ -8,20 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		75533C191F173A7A0016ECE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C181F173A7A0016ECE7 /* AppDelegate.swift */; };
-		75533C1B1F173A7A0016ECE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C1A1F173A7A0016ECE7 /* ViewController.swift */; };
 		75533C1E1F173A7A0016ECE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75533C1C1F173A7A0016ECE7 /* Main.storyboard */; };
 		75533C201F173A7A0016ECE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75533C1F1F173A7A0016ECE7 /* Assets.xcassets */; };
 		75533C231F173A7A0016ECE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75533C211F173A7A0016ECE7 /* LaunchScreen.storyboard */; };
+		75533C2F1F1749270016ECE7 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C2E1F1749270016ECE7 /* InitialViewController.swift */; };
+		75533C321F174A930016ECE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C311F174A930016ECE7 /* Constants.swift */; };
+		75533C351F174BB00016ECE7 /* InitialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C341F174BB00016ECE7 /* InitialCollectionViewCell.swift */; };
+		75533C371F174F7B0016ECE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C361F174F7B0016ECE7 /* HomeViewController.swift */; };
+		75533C3C1F17574D0016ECE7 /* OurJourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C3B1F17574D0016ECE7 /* OurJourneyViewController.swift */; };
+		75533C3E1F1758630016ECE7 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C3D1F1758630016ECE7 /* ReportsViewController.swift */; };
+		75533C451F1759460016ECE7 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C3F1F1759460016ECE7 /* AboutUsViewController.swift */; };
+		75533C461F1759460016ECE7 /* FootprintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C401F1759460016ECE7 /* FootprintsViewController.swift */; };
+		75533C471F1759460016ECE7 /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C411F1759460016ECE7 /* GalleryController.swift */; };
+		75533C481F1759460016ECE7 /* GuestSpeakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C421F1759460016ECE7 /* GuestSpeakViewController.swift */; };
+		75533C491F1759460016ECE7 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C431F1759460016ECE7 /* MediaViewController.swift */; };
+		75533C4A1F1759460016ECE7 /* WeWorkWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C441F1759460016ECE7 /* WeWorkWithViewController.swift */; };
+		E363DE159343D69EEF6D0242 /* Pods_Yoga_Kshema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584E49E8092208482A55484 /* Pods_Yoga_Kshema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1584E49E8092208482A55484 /* Pods_Yoga_Kshema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yoga_Kshema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75533C151F173A7A0016ECE7 /* Yoga Kshema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yoga Kshema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75533C181F173A7A0016ECE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75533C1A1F173A7A0016ECE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75533C1D1F173A7A0016ECE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75533C1F1F173A7A0016ECE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75533C221F173A7A0016ECE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75533C241F173A7A0016ECE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75533C2E1F1749270016ECE7 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Controllers/InitialViewController.swift; sourceTree = "<group>"; };
+		75533C311F174A930016ECE7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
+		75533C341F174BB00016ECE7 /* InitialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialCollectionViewCell.swift; path = "Custom Cells/InitialCollectionViewCell.swift"; sourceTree = "<group>"; };
+		75533C361F174F7B0016ECE7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		75533C3B1F17574D0016ECE7 /* OurJourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OurJourneyViewController.swift; path = "Controllers/About Us/OurJourneyViewController.swift"; sourceTree = "<group>"; };
+		75533C3D1F1758630016ECE7 /* ReportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsViewController.swift; path = "Controllers/About Us/ReportsViewController.swift"; sourceTree = "<group>"; };
+		75533C3F1F1759460016ECE7 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutUsViewController.swift; path = "Controllers/About Us/AboutUsViewController.swift"; sourceTree = "<group>"; };
+		75533C401F1759460016ECE7 /* FootprintsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FootprintsViewController.swift; path = "Controllers/About Us/FootprintsViewController.swift"; sourceTree = "<group>"; };
+		75533C411F1759460016ECE7 /* GalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryController.swift; path = "Controllers/About Us/GalleryController.swift"; sourceTree = "<group>"; };
+		75533C421F1759460016ECE7 /* GuestSpeakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestSpeakViewController.swift; path = "Controllers/About Us/GuestSpeakViewController.swift"; sourceTree = "<group>"; };
+		75533C431F1759460016ECE7 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaViewController.swift; path = "Controllers/About Us/MediaViewController.swift"; sourceTree = "<group>"; };
+		75533C441F1759460016ECE7 /* WeWorkWithViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeWorkWithViewController.swift; path = "Controllers/About Us/WeWorkWithViewController.swift"; sourceTree = "<group>"; };
+		AA6B6D2AF9D4897ADA040ACA /* Pods-Yoga Kshema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoga Kshema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2A25B994585D8C78559B46 /* Pods-Yoga Kshema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoga Kshema.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E363DE159343D69EEF6D0242 /* Pods_Yoga_Kshema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +67,8 @@
 			children = (
 				75533C171F173A7A0016ECE7 /* Yoga Kshema */,
 				75533C161F173A7A0016ECE7 /* Products */,
+				D7917CC7BF6E5828DFF83E68 /* Pods */,
+				EF639C1667A6A516A6D79EEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +84,97 @@
 			isa = PBXGroup;
 			children = (
 				75533C181F173A7A0016ECE7 /* AppDelegate.swift */,
-				75533C1A1F173A7A0016ECE7 /* ViewController.swift */,
-				75533C1C1F173A7A0016ECE7 /* Main.storyboard */,
-				75533C1F1F173A7A0016ECE7 /* Assets.xcassets */,
-				75533C211F173A7A0016ECE7 /* LaunchScreen.storyboard */,
-				75533C241F173A7A0016ECE7 /* Info.plist */,
+				75533C2C1F173AE60016ECE7 /* Controllers */,
+				75533C2B1F173ADA0016ECE7 /* Models */,
+				75533C2A1F173ABF0016ECE7 /* Views */,
+				75533C331F174B880016ECE7 /* Custom Cells */,
+				75533C301F174A750016ECE7 /* Utilities */,
+				75533C2D1F173AFC0016ECE7 /* Supporting Files */,
 			);
 			path = "Yoga Kshema";
+			sourceTree = "<group>";
+		};
+		75533C2A1F173ABF0016ECE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75533C1C1F173A7A0016ECE7 /* Main.storyboard */,
+				75533C211F173A7A0016ECE7 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		75533C2B1F173ADA0016ECE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		75533C2C1F173AE60016ECE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75533C2E1F1749270016ECE7 /* InitialViewController.swift */,
+				75533C361F174F7B0016ECE7 /* HomeViewController.swift */,
+				75533C381F1754050016ECE7 /* About Us */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		75533C2D1F173AFC0016ECE7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75533C1F1F173A7A0016ECE7 /* Assets.xcassets */,
+				75533C241F173A7A0016ECE7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75533C301F174A750016ECE7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				75533C311F174A930016ECE7 /* Constants.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		75533C331F174B880016ECE7 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75533C341F174BB00016ECE7 /* InitialCollectionViewCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		75533C381F1754050016ECE7 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				75533C3F1F1759460016ECE7 /* AboutUsViewController.swift */,
+				75533C401F1759460016ECE7 /* FootprintsViewController.swift */,
+				75533C411F1759460016ECE7 /* GalleryController.swift */,
+				75533C421F1759460016ECE7 /* GuestSpeakViewController.swift */,
+				75533C431F1759460016ECE7 /* MediaViewController.swift */,
+				75533C441F1759460016ECE7 /* WeWorkWithViewController.swift */,
+				75533C3B1F17574D0016ECE7 /* OurJourneyViewController.swift */,
+				75533C3D1F1758630016ECE7 /* ReportsViewController.swift */,
+			);
+			name = "About Us";
+			sourceTree = "<group>";
+		};
+		D7917CC7BF6E5828DFF83E68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B6D2AF9D4897ADA040ACA /* Pods-Yoga Kshema.debug.xcconfig */,
+				BE2A25B994585D8C78559B46 /* Pods-Yoga Kshema.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF639C1667A6A516A6D79EEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1584E49E8092208482A55484 /* Pods_Yoga_Kshema.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75533C271F173A7A0016ECE7 /* Build configuration list for PBXNativeTarget "Yoga Kshema" */;
 			buildPhases = (
+				9923D90C4EC66E5CDBE7D045 /* [CP] Check Pods Manifest.lock */,
 				75533C111F173A7A0016ECE7 /* Sources */,
 				75533C121F173A7A0016ECE7 /* Frameworks */,
 				75533C131F173A7A0016ECE7 /* Resources */,
+				5D3F444E5B6D895C8B9A59CD /* [CP] Embed Pods Frameworks */,
+				D019F49CF1D13570A49000F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +248,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D3F444E5B6D895C8B9A59CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9923D90C4EC66E5CDBE7D045 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D019F49CF1D13570A49000F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75533C111F173A7A0016ECE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75533C1B1F173A7A0016ECE7 /* ViewController.swift in Sources */,
+				75533C471F1759460016ECE7 /* GalleryController.swift in Sources */,
+				75533C451F1759460016ECE7 /* AboutUsViewController.swift in Sources */,
+				75533C4A1F1759460016ECE7 /* WeWorkWithViewController.swift in Sources */,
+				75533C371F174F7B0016ECE7 /* HomeViewController.swift in Sources */,
 				75533C191F173A7A0016ECE7 /* AppDelegate.swift in Sources */,
+				75533C2F1F1749270016ECE7 /* InitialViewController.swift in Sources */,
+				75533C3C1F17574D0016ECE7 /* OurJourneyViewController.swift in Sources */,
+				75533C3E1F1758630016ECE7 /* ReportsViewController.swift in Sources */,
+				75533C491F1759460016ECE7 /* MediaViewController.swift in Sources */,
+				75533C461F1759460016ECE7 /* FootprintsViewController.swift in Sources */,
+				75533C481F1759460016ECE7 /* GuestSpeakViewController.swift in Sources */,
+				75533C321F174A930016ECE7 /* Constants.swift in Sources */,
+				75533C351F174BB00016ECE7 /* InitialCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +434,12 @@
 		};
 		75533C281F173A7A0016ECE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6B6D2AF9D4897ADA040ACA /* Pods-Yoga Kshema.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6TP9C3Z7N8;
 				INFOPLIST_FILE = "Yoga Kshema/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitjini.Yoga-Kshema";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +449,12 @@
 		};
 		75533C291F173A7A0016ECE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2A25B994585D8C78559B46 /* Pods-Yoga Kshema.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6TP9C3Z7N8;
 				INFOPLIST_FILE = "Yoga Kshema/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitjini.Yoga-Kshema";
 				PRODUCT_NAME = "$(TARGET_NAME)";

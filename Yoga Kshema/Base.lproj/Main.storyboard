@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XJT-aQ-fSy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Yoga Kshema-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" title="Yoga Kshema" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="InitialViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,349 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gb0-Ew-prg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6CN-fA-ERK">
+                                    <size key="itemSize" width="344" height="127"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="12" maxX="12" maxY="12"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InitialCollectionViewCell" id="uIv-CC-z4n" customClass="InitialCollectionViewCell" customModule="Yoga_Kshema" customModuleProvider="target">
+                                        <rect key="frame" x="15.5" y="12" width="344" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="127"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0mP-2s-q8E">
+                                                    <rect key="frame" x="120.5" y="0.0" width="103" height="103"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0mP-2s-q8E" secondAttribute="height" multiplier="1:1" id="Y5O-TL-htD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyB-G6-vZJ">
+                                                    <rect key="frame" x="150.5" y="106" width="43.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.16470588235294117" green="0.40000000000000002" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EyB-G6-vZJ" firstAttribute="top" secondItem="0mP-2s-q8E" secondAttribute="bottom" constant="3" id="NkW-Wq-0IA"/>
+                                            <constraint firstItem="0mP-2s-q8E" firstAttribute="centerX" secondItem="uIv-CC-z4n" secondAttribute="centerX" id="RhU-NM-381"/>
+                                            <constraint firstAttribute="bottom" secondItem="EyB-G6-vZJ" secondAttribute="bottom" constant="3" id="bq9-YD-WIz"/>
+                                            <constraint firstItem="0mP-2s-q8E" firstAttribute="top" secondItem="uIv-CC-z4n" secondAttribute="top" id="n7d-Pz-GcZ"/>
+                                            <constraint firstItem="EyB-G6-vZJ" firstAttribute="centerX" secondItem="uIv-CC-z4n" secondAttribute="centerX" id="y6V-Bl-MeG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="0mP-2s-q8E" id="dBx-XF-fRx"/>
+                                            <outlet property="title" destination="EyB-G6-vZJ" id="1wj-s1-2d1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XLI-DE-pwp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wvp-oC-iTn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gb0-Ew-prg" secondAttribute="bottom" id="BnC-qh-pAr"/>
+                            <constraint firstItem="gb0-Ew-prg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QBK-bm-e4L"/>
+                            <constraint firstItem="gb0-Ew-prg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ar8-DW-erS"/>
+                            <constraint firstAttribute="trailing" secondItem="gb0-Ew-prg" secondAttribute="trailing" id="rMe-9X-tzM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="YogaKshema" id="1I9-R3-MPX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="924" y="776.76161919040487"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="vMm-As-G3O">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wjX-aD-ooQ" customClass="HomeViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pPj-eM-ppk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zxz-FL-8AC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qg2-Nq-mw4">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJD-JJ-oJM">
+                                <rect key="frame" x="20" y="20" width="54" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X5-pc-0aG">
+                                <rect key="frame" x="20" y="64" width="335" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">YogaKshema is a registered not-for-profit organization run by a group of committed volunteers dedicated towards the improvement of the Quality of Living of people in general and specifically those who are survivors of Chronic illnesses as well as their caregivers.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5X5-pc-0aG" firstAttribute="leading" secondItem="qg2-Nq-mw4" secondAttribute="leading" constant="20" id="5lZ-sG-YUr"/>
+                            <constraint firstItem="bJD-JJ-oJM" firstAttribute="top" secondItem="pPj-eM-ppk" secondAttribute="bottom" constant="20" id="E2l-A0-TUw"/>
+                            <constraint firstItem="bJD-JJ-oJM" firstAttribute="leading" secondItem="qg2-Nq-mw4" secondAttribute="leading" constant="20" id="YVL-XK-04a"/>
+                            <constraint firstItem="5X5-pc-0aG" firstAttribute="top" secondItem="bJD-JJ-oJM" secondAttribute="bottom" constant="20" id="ZjG-bV-69Y"/>
+                            <constraint firstAttribute="trailing" secondItem="5X5-pc-0aG" secondAttribute="trailing" constant="20" id="mzg-43-Ptr"/>
+                            <constraint firstItem="Zxz-FL-8AC" firstAttribute="top" secondItem="5X5-pc-0aG" secondAttribute="bottom" constant="20" id="nef-mO-p7c"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="textView" destination="5X5-pc-0aG" id="ACQ-Ye-r6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFt-Va-2jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="777"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="VUS-qn-Ca7">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mFD-K8-lai" customClass="AboutUsViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ftC-f2-Geo"/>
+                        <viewControllerLayoutGuide type="bottom" id="LZB-ro-Bbc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="slD-QI-HwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-kf-0Te">
+                                <rect key="frame" x="20" y="40" width="335" height="308"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.40000000000000002" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="ieo-D8-AJA"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mFD-K8-lai" id="Nul-7v-wtH"/>
+                                    <outlet property="delegate" destination="mFD-K8-lai" id="Ris-tV-X1V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cpC-kf-0Te" secondAttribute="trailing" constant="20" id="UxA-Vy-b00"/>
+                            <constraint firstItem="cpC-kf-0Te" firstAttribute="leading" secondItem="slD-QI-HwQ" secondAttribute="leading" constant="20" id="XFd-4r-Zx4"/>
+                            <constraint firstItem="cpC-kf-0Te" firstAttribute="top" secondItem="ftC-f2-Geo" secondAttribute="bottom" constant="20" id="ZV9-Pj-A8v"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="cpC-kf-0Te" id="62v-dz-qRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5Q-qw-gi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2362" y="777"/>
+        </scene>
+        <!--Our Journey View Controller-->
+        <scene sceneID="QPb-Cj-XjZ">
+            <objects>
+                <viewController storyboardIdentifier="OurJourneyViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vaj-UQ-kCx" customClass="OurJourneyViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zQl-m8-EcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="TiJ-S1-kl0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tlp-eO-7h8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFR-tA-fmb">
+                                <rect key="frame" x="20" y="76" width="335" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">YogaKshema Rehabilitation &amp; Wellness Center began it’s journey in the year 2006 as “Comprehensive Stroke Management Center“.  Dr. Usha Vasthare &amp; Ms. Akhila Vasthare started the organization in order to provide complementary rehabilitative care for the survivors of Stroke and their caregivers.  The rehabilitation program focused on providing
+
+Physical Rehab through customized yoga, pranayama, japa and meditation techniques
+Emotional Rehab through Support Group meetings
+Spiritual Rehab through discussions on various philosophical and spiritual works.
+Very soon, the need for such a holistic and comprehensive approach was felt for not just survivors of Stroke but every chronic illness.  The unique feature of including not just the survivor but their caregivers also appealed to the community at large. Recognizing this need, “Comprehensive Stroke Management Center” evolved to become “YogaKshema Rehabilitation &amp; Wellness Center“.
+
+The initial works of YogaKshema was focused on reaching out to these survivors of chronic illnesses and especially the senior citizens.  We began our work at Old age homes in Bangalore city.  Our approach included intensive one month programs which were followed by regular support group meetings.  Several volunteers were also recruited for continued creative rehabilitative programs. The following are the Old Age homes in Bangalore where our programs were conducted:
+
+Sandhya Deepa at Uttarahalli
+Ashraya Seva Trust at Rajajinagar
+Sri Rama Vruddhashrama at Malleshwaram
+Sandhya Kirana (a Day Care Center) at Richmond Town
+There were Yoga Certification Programs conducted for the benefit of general public who were interested to render services to senior citizens.  Pranayama workshops were also held in all the above mentioned Old age homes.
+
+One of the basic tenets of YogaKshema is that “Prevention is better than Cure”.  In order to encourage the community at large to lead a healthy living style, YogaKshema started conducting several wellness programs.  These programs were open for everyone from all walks of the society – from students to professionals, homemakers to retirees.  The workshops brought the latest research in the field of Neuroscience to the doorsteps of common man.  The contents have diversified over these years and are always customized to suit the needs of the participants.
+
+One of the dreams of YogaKshema has been to work at grassroots level especially in the rural areas to create health awareness.  This dream was realized in the year 2012 when YogaKshema tied up with NIVASA to develop a hamlet – Timmayyanadoddi near Jigani in Bangalore.
+
+It has been a humbling experience to realize that each year, YogaKshema’s activities have not only grown in number but also spread to include a vast spectrum of the community.  We are working with other organizations and institutions to contribute for the development of a healthy and vibrant community around us.  We humbly acknowledge the contributions of and are ever grateful to the many volunteers, supporters and well-wishers who have been a part of our journey so far and continue to be.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Journey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-cW-Dyu">
+                                <rect key="frame" x="20" y="40" width="110.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TFR-tA-fmb" firstAttribute="top" secondItem="b4O-cW-Dyu" secondAttribute="bottom" constant="12" id="Fel-bj-zgv"/>
+                            <constraint firstItem="TiJ-S1-kl0" firstAttribute="top" secondItem="TFR-tA-fmb" secondAttribute="bottom" constant="20" id="GpM-Ez-BzC"/>
+                            <constraint firstAttribute="trailing" secondItem="TFR-tA-fmb" secondAttribute="trailing" constant="20" id="LUG-Rw-bdI"/>
+                            <constraint firstItem="b4O-cW-Dyu" firstAttribute="leading" secondItem="Tlp-eO-7h8" secondAttribute="leading" constant="20" id="bBN-1W-07u"/>
+                            <constraint firstItem="TFR-tA-fmb" firstAttribute="leading" secondItem="Tlp-eO-7h8" secondAttribute="leading" constant="20" id="bWY-19-4VP"/>
+                            <constraint firstItem="b4O-cW-Dyu" firstAttribute="top" secondItem="zQl-m8-EcV" secondAttribute="bottom" constant="20" id="ra0-Nz-7SW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuU-dR-cB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8000000000002" y="1421.7391304347827"/>
+        </scene>
+        <!--Reports View Controller-->
+        <scene sceneID="JjL-0u-1G2">
+            <objects>
+                <viewController storyboardIdentifier="ReportsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wu7-vi-iIf" customClass="ReportsViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hTC-Rp-3Ik"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uvd-mt-0kj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7s-gt-Dhq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UL-jn-x9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="2131"/>
+        </scene>
+        <!--We Work With View Controller-->
+        <scene sceneID="c38-Qk-9n0">
+            <objects>
+                <viewController storyboardIdentifier="WeWorkWithViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5c-mh-VFp" customClass="WeWorkWithViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Fi-k3-7LG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mz7-PK-Lxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nUQ-C3-V9O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqL-5f-YQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="2803"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="bHW-3x-LkR">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V6v-eB-WBf" customClass="GalleryViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6RF-NB-ZUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="dvr-At-YoZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ROO-gk-xNt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uS9-GA-4by" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="3526"/>
+        </scene>
+        <!--Media View Controller-->
+        <scene sceneID="BEd-AM-Cmh">
+            <objects>
+                <viewController storyboardIdentifier="MediaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="817-dY-4YU" customClass="MediaViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5r7-5g-fLe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xUY-71-Tja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84p-cQ-HPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPi-uR-3II" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="4207"/>
+        </scene>
+        <!--Footprints View Controller-->
+        <scene sceneID="9uD-MI-xwO">
+            <objects>
+                <viewController storyboardIdentifier="FootprintsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BNP-m9-M5S" customClass="FootprintsViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EHm-Ob-U9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="74c-E1-IWU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hmS-Ex-aLa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGo-8B-bjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="4916"/>
+        </scene>
+        <!--Guest Speak View Controller-->
+        <scene sceneID="gzQ-HG-KrG">
+            <objects>
+                <viewController storyboardIdentifier="GuestSpeakViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSQ-uL-fX8" customClass="GuestSpeakViewController" customModule="Yoga_Kshema" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0WE-Nm-fkl"/>
+                        <viewControllerLayoutGuide type="bottom" id="t9q-vY-6KG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5tl-n7-ipP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEg-Kv-tLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="5597"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jcw-Js-cua">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJT-aQ-fSy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5L1-lD-Uoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.63921568627450975" green="0.38039215686274508" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Y8-4u-iRy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36A-w3-szK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="776.76161919040487"/>
         </scene>
     </scenes>
 </document>
