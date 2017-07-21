@@ -6,6 +6,9 @@ target 'Yoga Kshema' do
   use_frameworks!
 
   # Pods for Yoga Kshema
-  pod 'youtube-ios-player-helper'
+  pod 'Alamofire'
+  pod 'Kingfisher'
+  pod 'Kanna'
+  pod 'PDFReader'
 
 end

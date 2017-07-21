@@ -1,12 +1,21 @@
 PODS:
-  - youtube-ios-player-helper (0.1.6)
+  - Alamofire (4.5.0)
+  - Kanna (2.2.1)
+  - Kingfisher (3.10.3)
+  - PDFReader (2.4.0)
 
 DEPENDENCIES:
-  - youtube-ios-player-helper
+  - Alamofire
+  - Kanna
+  - Kingfisher
+  - PDFReader
 
 SPEC CHECKSUMS:
-  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  PDFReader: 0bb6be11c8876c6cea2598f0a0ab9b6640a8a018
 
-PODFILE CHECKSUM: 5f77c250ba7a6cf645bc96b4395d9b87863dc81e
+PODFILE CHECKSUM: 31c56fb8960906c08923e309fa858fa2ee5722cb
 
 COCOAPODS: 1.2.0
