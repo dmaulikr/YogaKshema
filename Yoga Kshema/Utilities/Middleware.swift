@@ -10,7 +10,6 @@ import Foundation
 
 class Middleware {
     
-    static let shared = Middleware()
     var delegate: HTTPUtilityDelegate?
     
     lazy private var httpUtility: HTTPUtility = {

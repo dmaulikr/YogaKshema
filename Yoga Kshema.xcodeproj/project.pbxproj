@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		754B8A731F271D7000D78573 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B8A721F271D7000D78573 /* InitialViewController.swift */; };
+		754B8A761F271FF400D78573 /* InitialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B8A751F271FF400D78573 /* InitialCollectionViewCell.swift */; };
+		754B8A781F27613B00D78573 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B8A771F27613B00D78573 /* ContentViewController.swift */; };
+		754B8A7A1F27714300D78573 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B8A791F27714300D78573 /* BaseViewController.swift */; };
 		75533C191F173A7A0016ECE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C181F173A7A0016ECE7 /* AppDelegate.swift */; };
 		75533C1E1F173A7A0016ECE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75533C1C1F173A7A0016ECE7 /* Main.storyboard */; };
 		75533C201F173A7A0016ECE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75533C1F1F173A7A0016ECE7 /* Assets.xcassets */; };
@@ -14,15 +18,19 @@
 		75533C321F174A930016ECE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C311F174A930016ECE7 /* Constants.swift */; };
 		75533C581F1790C00016ECE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C571F1790C00016ECE7 /* Extensions.swift */; };
 		75533C5A1F1896620016ECE7 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75533C591F1896620016ECE7 /* ColorPalette.swift */; };
-		759E60BC1F1DFD6200F8B37D /* InitialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E60BB1F1DFD6200F8B37D /* InitialTableViewController.swift */; };
 		759E60C01F1E08C700F8B37D /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E60BF1F1E08C700F8B37D /* HTMLParser.swift */; };
 		759E60C21F1E146D00F8B37D /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E60C11F1E146D00F8B37D /* Middleware.swift */; };
 		759E60C41F1E147C00F8B37D /* HTTPUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E60C31F1E147C00F8B37D /* HTTPUtility.swift */; };
+		75BBBE431F28638200BD84D3 /* WhichPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBBE421F28638200BD84D3 /* WhichPage.swift */; };
 		E363DE159343D69EEF6D0242 /* Pods_Yoga_Kshema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584E49E8092208482A55484 /* Pods_Yoga_Kshema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1584E49E8092208482A55484 /* Pods_Yoga_Kshema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yoga_Kshema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		754B8A721F271D7000D78573 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Controllers/InitialViewController.swift; sourceTree = "<group>"; };
+		754B8A751F271FF400D78573 /* InitialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialCollectionViewCell.swift; path = "Custom Cells/InitialCollectionViewCell.swift"; sourceTree = "<group>"; };
+		754B8A771F27613B00D78573 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewController.swift; path = Controllers/ContentViewController.swift; sourceTree = "<group>"; };
+		754B8A791F27714300D78573 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
 		75533C151F173A7A0016ECE7 /* Yoga Kshema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yoga Kshema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75533C181F173A7A0016ECE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75533C1D1F173A7A0016ECE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,10 +40,10 @@
 		75533C311F174A930016ECE7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
 		75533C571F1790C00016ECE7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Utilities/Extensions.swift; sourceTree = "<group>"; };
 		75533C591F1896620016ECE7 /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalette.swift; path = Utilities/ColorPalette.swift; sourceTree = "<group>"; };
-		759E60BB1F1DFD6200F8B37D /* InitialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialTableViewController.swift; path = Controllers/InitialTableViewController.swift; sourceTree = "<group>"; };
 		759E60BF1F1E08C700F8B37D /* HTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTMLParser.swift; path = Utilities/HTMLParser.swift; sourceTree = "<group>"; };
 		759E60C11F1E146D00F8B37D /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = Utilities/Middleware.swift; sourceTree = "<group>"; };
 		759E60C31F1E147C00F8B37D /* HTTPUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPUtility.swift; path = Utilities/HTTPUtility.swift; sourceTree = "<group>"; };
+		75BBBE421F28638200BD84D3 /* WhichPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhichPage.swift; path = Utilities/WhichPage.swift; sourceTree = "<group>"; };
 		AA6B6D2AF9D4897ADA040ACA /* Pods-Yoga Kshema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoga Kshema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema.debug.xcconfig"; sourceTree = "<group>"; };
 		BE2A25B994585D8C78559B46 /* Pods-Yoga Kshema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoga Kshema.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yoga Kshema/Pods-Yoga Kshema.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		754B8A741F271FD500D78573 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				754B8A751F271FF400D78573 /* InitialCollectionViewCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		75533C0C1F173A7A0016ECE7 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +93,7 @@
 				75533C2B1F173ADA0016ECE7 /* Models */,
 				75533C2A1F173ABF0016ECE7 /* Views */,
 				75533C2C1F173AE60016ECE7 /* Controllers */,
+				754B8A741F271FD500D78573 /* Custom Cells */,
 				75533C301F174A750016ECE7 /* Utilities */,
 				75533C2D1F173AFC0016ECE7 /* Supporting Files */,
 			);
@@ -102,7 +119,9 @@
 		75533C2C1F173AE60016ECE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				759E60BB1F1DFD6200F8B37D /* InitialTableViewController.swift */,
+				754B8A791F27714300D78573 /* BaseViewController.swift */,
+				754B8A721F271D7000D78573 /* InitialViewController.swift */,
+				754B8A771F27613B00D78573 /* ContentViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +144,7 @@
 				759E60BF1F1E08C700F8B37D /* HTMLParser.swift */,
 				759E60C31F1E147C00F8B37D /* HTTPUtility.swift */,
 				759E60C11F1E146D00F8B37D /* Middleware.swift */,
+				75BBBE421F28638200BD84D3 /* WhichPage.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -270,12 +290,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759E60BC1F1DFD6200F8B37D /* InitialTableViewController.swift in Sources */,
+				754B8A761F271FF400D78573 /* InitialCollectionViewCell.swift in Sources */,
 				759E60C21F1E146D00F8B37D /* Middleware.swift in Sources */,
+				75BBBE431F28638200BD84D3 /* WhichPage.swift in Sources */,
+				754B8A7A1F27714300D78573 /* BaseViewController.swift in Sources */,
 				75533C5A1F1896620016ECE7 /* ColorPalette.swift in Sources */,
+				754B8A731F271D7000D78573 /* InitialViewController.swift in Sources */,
 				759E60C41F1E147C00F8B37D /* HTTPUtility.swift in Sources */,
 				75533C191F173A7A0016ECE7 /* AppDelegate.swift in Sources */,
 				759E60C01F1E08C700F8B37D /* HTMLParser.swift in Sources */,
+				754B8A781F27613B00D78573 /* ContentViewController.swift in Sources */,
 				75533C581F1790C00016ECE7 /* Extensions.swift in Sources */,
 				75533C321F174A930016ECE7 /* Constants.swift in Sources */,
 			);
@@ -403,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6TP9C3Z7N8;
 				INFOPLIST_FILE = "Yoga Kshema/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitjini.Yoga-Kshema";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6TP9C3Z7N8;
 				INFOPLIST_FILE = "Yoga Kshema/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitjini.Yoga-Kshema";
 				PRODUCT_NAME = "$(TARGET_NAME)";
