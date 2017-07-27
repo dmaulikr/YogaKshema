@@ -38,6 +38,8 @@ class ContentViewController: UIViewController {
         pageHandler.isSubMenu = isSubMenu
         middleware.delegate = self
         middleware.request(page: pageHandler.url())
+        // Turn the indicator on.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func onViewDidAppear() {}
@@ -45,6 +47,12 @@ class ContentViewController: UIViewController {
     func onViewWillDisappear() {
         // Reset WhichPage.isSubMenu flag.
         if pageHandler.isSubMenu { pageHandler.isSubMenu = false }
+        // If network indicator is on, turn off.
+        // Turn the indicator off.
+        if UIApplication.shared.isNetworkActivityIndicatorVisible {
+            // Turn the indicator off.
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
     }
 }
 
@@ -143,6 +151,9 @@ extension ContentViewController {
 extension ContentViewController: HTTPUtilityDelegate {
     
     func parsed(withHeader header: String, content: String) {
+        // Turn the indicator off.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
         var head = header.replacingOccurrences(of: "\r", with: "")
         head = head.replacingOccurrences(of: "\t", with: "")
         head = head.replacingOccurrences(of: "\n", with: "")
@@ -155,6 +166,8 @@ extension ContentViewController: HTTPUtilityDelegate {
     }
     
     func failed() {
+        // Turn the indicator off.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         tableView.isHidden = true
     }
 }
