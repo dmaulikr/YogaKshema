@@ -17,9 +17,7 @@ class InitialViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) { super.viewDidAppear(animated); onViewDidAppear() }
     
-    func onViewDidAppear() {
-        WhichPage.shared.reset()
-    }
+    func onViewDidAppear() {}
 
 }
 
@@ -47,7 +45,9 @@ extension InitialViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func next(index: Int) {
-        WhichPage.shared.menu = [.home, .aboutUs, .people, .projects, .talks, .workshops, .supportGroups, .events, .contactUs][index]
+        // Set the selected menu.
+        Menu.shared.menu = [.home, .aboutUs, .people, .projects, .talks, .workshops, .supportGroups, .events, .contactUs][index]
+        // Push page.
         let vc = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
         navigationController?.pushViewController(vc, animated: true)
     }

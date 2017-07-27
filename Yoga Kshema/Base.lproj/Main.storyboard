@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,7 +91,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-E0-518">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_network" translatesAutoresizingMaskIntoConstraints="NO" id="aKp-Xc-GMf">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Hub-xr-ee1"/>
+                                    <constraint firstAttribute="width" constant="150" id="fFV-f0-X8N"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-E0-518">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -103,10 +109,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aKp-Xc-GMf" firstAttribute="centerX" secondItem="MO3-Wf-XYU" secondAttribute="centerX" id="8Nb-az-6bm"/>
                             <constraint firstItem="8fZ-Zy-qHe" firstAttribute="top" secondItem="7D4-E0-518" secondAttribute="bottom" id="9r0-rd-Zk8"/>
                             <constraint firstItem="7D4-E0-518" firstAttribute="top" secondItem="zOy-2r-zN8" secondAttribute="bottom" id="Feo-7J-EsQ"/>
                             <constraint firstAttribute="trailing" secondItem="7D4-E0-518" secondAttribute="trailing" id="Ncq-ll-jQS"/>
                             <constraint firstItem="7D4-E0-518" firstAttribute="leading" secondItem="MO3-Wf-XYU" secondAttribute="leading" id="m1f-lf-cpf"/>
+                            <constraint firstItem="aKp-Xc-GMf" firstAttribute="centerY" secondItem="MO3-Wf-XYU" secondAttribute="centerY" id="svd-Zu-qpe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -136,4 +144,7 @@
             <point key="canvasLocation" x="904.79999999999995" y="2718.8905547226391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="no_network" width="150" height="150"/>
+    </resources>
 </document>

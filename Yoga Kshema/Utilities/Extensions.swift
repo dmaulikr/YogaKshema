@@ -8,12 +8,17 @@
 
 import UIKit
 
-public extension UITableView {
-    func getTextViewCellHeight(for text: String) -> CGFloat {
-        let textView = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: Constants.width - 40.0, height: 0.0))
-        textView.text = text
+public extension String {
+    
+    func toTextView() -> UITextView {
+        let textView = UITextView(frame: UITableViewCell(style: .default, reuseIdentifier: nil).bounds)
+        textView.contentInset = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
         textView.textAlignment = .justified
-        let fit = textView.sizeThatFits(CGSize(width: Constants.width - 40.0, height: CGFloat.greatestFiniteMagnitude))
-        return (fit.height + 40.0)
+        textView.isScrollEnabled = false
+        textView.text = self
+        textView.sizeToFit()
+        textView.scrollRangeToVisible(NSRange(location: 0, length: 0))
+        return textView
     }
+    
 }

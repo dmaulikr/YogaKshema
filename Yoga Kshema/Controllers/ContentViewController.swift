@@ -18,11 +18,12 @@ class ContentViewController: UIViewController {
     
     // Class Instances.
     lazy var middleware = Middleware()
+    var pageHandler = WhichPage.shared
     
     // Variables.
     var content: Content = Content(header: "", content: "")
-    var noNetwork = false
     var isSubMenu = false
+    var noNetwork = false
     
     // IBOutlets.
     @IBOutlet weak var tableView: UITableView!
@@ -30,19 +31,20 @@ class ContentViewController: UIViewController {
     // MARK: - Life cycle methods.
     override func viewDidLoad() { super.viewDidLoad(); onViewDidLoad() }
     override func viewDidAppear(_ animated: Bool) { super.viewDidAppear(animated); onViewDidAppear() }
+    override func viewWillDisappear(_ animated: Bool) { super.viewWillDisappear(animated); onViewWillDisappear() }
     
     func onViewDidLoad() {
         // Load appropriate page.
+        pageHandler.isSubMenu = isSubMenu
         middleware.delegate = self
-        middleware.request(page: WhichPage.shared.url())
+        middleware.request(page: pageHandler.url())
     }
     
-    func onViewDidAppear() {
-        if !isSubMenu { WhichPage.shared.resetSubMenus(); tableView.reloadData() }
-        // Deselect selected rows.
-        if let index = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: index, animated: true)
-        }
+    func onViewDidAppear() {}
+    
+    func onViewWillDisappear() {
+        // Reset WhichPage.isSubMenu flag.
+        if pageHandler.isSubMenu { pageHandler.isSubMenu = false }
     }
 }
 
@@ -50,30 +52,43 @@ class ContentViewController: UIViewController {
 extension ContentViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return noNetwork ? 0 : WhichPage.shared.numberOfSections()
+        return pageHandler.isSubMenu ? pageHandler.subMenu.numberOfSections() : pageHandler.menu.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return WhichPage.shared.getHeaderFor(sectionAt: section, header: content.header)
+        return pageHandler.isSubMenu ?
+        pageHandler.subMenu.viewForHeader(withText: content.header) :
+        pageHandler.menu.viewForHeader(atSection: section, withText: content.header)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return WhichPage.shared.getHeightFor(sectionAt: section)
+        return pageHandler.isSubMenu ?
+        pageHandler.subMenu.heightForHeader() :
+        pageHandler.menu.heightForHeader(atSection: section)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noNetwork ? 0 : WhichPage.shared.numberOfCells(inSection: section)
+        return pageHandler.isSubMenu ?
+        pageHandler.subMenu.numberOfCells() :
+        pageHandler.menu.numberOfCells(inSection: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return WhichPage.shared.getCell(cellAt: indexPath.row, inSection: indexPath.section, content: content.content)
+        return pageHandler.isSubMenu ?
+        pageHandler.subMenu.viewForCell(withText: content.content) :
+        pageHandler.menu.viewForCell(atIndexPath: indexPath, andContent: content.content)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return WhichPage.shared.getHeightFor(cellAt: indexPath.row, inSection: indexPath.section, content: content.content)
+        return pageHandler.isSubMenu ?
+        pageHandler.subMenu.getHeightForCell(withText: content.content) :
+        pageHandler.menu.getHeightForCell(inSection: indexPath.section, content: content.content)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard pageHandler.shouldPush() &&
+            !pageHandler.isSubMenu &&
+            indexPath.section == 0 else { return }
         didSelect(indexPath: indexPath)
     }
 }
@@ -81,43 +96,40 @@ extension ContentViewController: UITableViewDataSource, UITableViewDelegate {
 extension ContentViewController {
     
     func didSelect(indexPath: IndexPath) {
-        let sharedInstance = WhichPage.shared
-        guard let isMenu = sharedInstance.menu else { return }
-        
-        switch isMenu {
-        
+        // Set SubMenu, and push.
+        switch pageHandler.menu.menu {
         case .aboutUs:
-            if indexPath.section == 1 || sharedInstance.aboutUsSubMenu != nil { break }
-            sharedInstance.aboutUsSubMenu = [.ourJourney, .reports, .weWorkWith, .gallery, .media, .footprints, .guestSpeak][indexPath.row]
-            push()
+            pageHandler.subMenu.aboutUsSubMenu = [
+                .ourJourney, .reports, .weWorkWith, .gallery, .media, .footprints, .guestSpeak
+                ][indexPath.row]
             
         case .people:
-            if indexPath.section == 1 || sharedInstance.peopleSubMenu != nil { break }
-            sharedInstance.peopleSubMenu = [.trustees, .developmentCommittee,.faculty, .supporters, .inspirations][indexPath.row]
-            push()
+            pageHandler.subMenu.peopleSubMenu = [
+                .trustees, .developmentCommittee,.faculty, .supporters, .inspirations
+                ][indexPath.row]
             
         case .projects:
-            if indexPath.section == 1 || sharedInstance.projectsSubMenu != nil { break }
-            sharedInstance.projectsSubMenu = [.ruralEmpowerment, .childEducation, .kidsForKidsSake, .palliativeCare, .publication][indexPath.row]
-            push()
+            pageHandler.subMenu.projectsSubMenu = [
+                .ruralEmpowerment, .childEducation, .kidsForKidsSake, .palliativeCare, .publication
+                ][indexPath.row]
             
         case .workshops:
-            if indexPath.section == 1 || sharedInstance.workshopsSubMenu != nil { break }
-            sharedInstance.workshopsSubMenu = [.forWellness, .forRehab, .feedbacks][indexPath.row]
-            push()
+            pageHandler.subMenu.workshopsSubMenu = [
+                .forWellness, .forRehab, .feedbacks
+                ][indexPath.row]
             
         case .supportGroups:
-            if indexPath.section == 1 || sharedInstance.supportGroupsSubMenu != nil { break }
-            sharedInstance.supportGroupsSubMenu = .neuroSculptorSeries
-            push()
+            pageHandler.subMenu.supportGroupsSubMenu = .neuroSculptorSeries
             
         case .contactUs:
-            if indexPath.section == 1 || sharedInstance.contactUsSubMenu != nil { break }
-            sharedInstance.contactUsSubMenu = [.supportUs, .ykBlogs][indexPath.row]
-            push()
+            pageHandler.subMenu.contactUsSubMenu = [
+                .supportUs, .ykBlogs
+                ][indexPath.row]
             
         default: break
         }
+        // Push.
+        push()
     }
     
     func push() {
@@ -135,9 +147,7 @@ extension ContentViewController: HTTPUtilityDelegate {
         head = head.replacingOccurrences(of: "\t", with: "")
         head = head.replacingOccurrences(of: "\n", with: "")
         
-        var body = content.replacingOccurrences(of: "\r", with: "")
-        body = body.replacingOccurrences(of: "\t", with: "")
-        body = body.replacingOccurrences(of: "\n", with: "")
+        let body = content.replacingOccurrences(of: "\t", with: "")
         
         self.content = Content(header: head, content: body)
         
@@ -145,8 +155,6 @@ extension ContentViewController: HTTPUtilityDelegate {
     }
     
     func failed() {
-        let imgV = UIImageView(image: UIImage(named: "no_network"))
-        imgV.contentMode = .scaleAspectFit
-        self.tableView.backgroundView = imgV
+        tableView.isHidden = true
     }
 }
